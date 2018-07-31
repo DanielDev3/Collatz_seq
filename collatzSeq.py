@@ -11,7 +11,16 @@ def collatz(num):
     print(x)
     
 x = 0
-myNum = int(input("Please enter a number:\n"))
-collatz(myNum)
-while x !=1:
-    collatz(x)
+
+def ask_for_int():
+        myNum = int(input("Please enter a number:\n"))
+        collatz(myNum)
+        while x !=1:
+            collatz(x)
+          
+if __name__ == '__main__':
+    try:
+        ask_for_int()
+    except:
+        print("Error, please enter an integer")
+        ask_for_int()
